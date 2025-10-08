@@ -1,0 +1,42 @@
+/* Whole app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Navbar sits at top */
+.app-container > nav {
+  position: sticky; /* keeps navbar visible */
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px; /* 👈 gap after navbar */
+}
+
+/* Main content area */
+.app-main {
+  flex: 1;
+  padding: 80px 60px; /* 👈 more padding inside pages */
+  max-width: 10000px;
+  margin: 0 auto; /* center content like a webpage */
+}
+
+/* Each page block */
+.app-main > * {
+  margin-bottom: 90px; /* 👈 BIG gap between pages */
+  padding: 200px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Last page block no extra space */
+.app-main > *:last-child {
+  margin-bottom: 0;
+}
